@@ -1,0 +1,68 @@
+{
+  "frontPage": [
+    {
+        "id": 1,
+        "title": "Exclusividad pura y máxima calidad",
+        "description": "Lanzamos colecciones exclusivas en series limitadas para que tu estilo siga siendo fresco y único: una vez agotadas, no habrá más.",
+        "image": "/images/home/frontpage/man-orange-style.avif"
+    },
+    {
+        "id": 2,
+        "title": "Enfocada en la calidad y la comodidad",
+        "description": "Telas de alta calidad y mano de obra experta que resisten el ritmo de la ciudad, manteniéndote cómodo.",
+        "image": "/images/home/frontpage/woman-orange-sweatshirt.avif"
+    },
+    {
+        "id": 3,
+        "title": "Donde el arte se une a la actitud",
+        "description": "Lanzamos colecciones exclusivas en series limitadas para que tu estilo siga siendo fresco y único: una vez agotadas, no habrá más.",
+        "image": "/images/home/frontpage/man-gray-sweatshirt.avif"
+    },
+    {
+        "id": 4,
+        "title": "Moda lista para el futuro",
+        "description": "Desde siluetas oversized hasta materiales innovadores, desafiamos los límites del streetwear moderno manteniéndonos fieles a la cultura.",
+        "image": "/images/home/frontpage/woman-white-sweatshirt.avif"
+    },
+    {
+        "id": 5,
+        "title": "Estilo puramente urbano",
+        "description": "Más que una marca, somos el punto de encuentro para creativos, skaters y trendsetters que dan vida a la calle.",
+        "image": "/images/home/frontpage/man-black-sweatshirt.avif"
+    }
+
+  ],
+  "newDrops": {
+    "title": "Lo más nuevo",
+    "description": "Destaca con nuestra última colección: diseños audaces, telas premium y cortes listos para la calle. Una vez que se agoten, no vuelven. ¡No te quedes fuera!",
+    "drops": [
+        {
+            "id": 1,
+            "title": "SHADOW DRIP",
+            "image": "images/home/new-drops/drops-man-black.webp",
+            "description": "Una sudadera minimalista y elegante en tonos oscuros, con sutiles detalles reflectantes para un estilo urbano natural.",
+            "price": "50",
+            "offerPrice": "30"
+        },
+        {
+            "id": 2,
+            "title": "URBAN PHANTOM",
+            "image": "images/home/new-drops/drops-girl-white.avif",
+            "description": "Urban Phantom – Una sudadera oversize audaz con gráficos vanguardistas y una estética sigilosa inspirada en las noches de ciudad.",
+            "price": "50",
+            "offerPrice": "30"
+        },
+        {
+            "id": 3,
+            "title": "NEON REBELLION",
+            "image": "images/home/new-drops/drops-man-gray.webp",
+            "description": "Una pieza clave con detalles neón vibrantes e influencias de arte urbano rebelde para un look que no pasa desapercibido.",
+            "price": "50",
+            "offerPrice": "30"
+        }
+    ]
+  }
+  
+  
+  
+}
