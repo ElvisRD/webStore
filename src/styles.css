@@ -3,3 +3,15 @@
 @import "primeicons/primeicons.css";
 
 @source "../src/**/*.{html,ts}";
+
+@font-face {
+  font-family: 'default-font';
+  src: url('../public/fonts/fonts.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Optimiza la carga visual */
+}
+
+@theme {
+  --font-sans: "MiFuenteCustom", ui-sans-serif, system-ui, sans-serif;
+}

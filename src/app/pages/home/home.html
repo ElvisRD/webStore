@@ -1,7 +1,66 @@
-<div class="h-full bg-zinc-800">
-  <div class="flex flex-col">
-    <span>Style</span>
-    <span>Vibe</span>
-    <span>Reflect</span>
+<section class="flex justify-center items-center text-white">
+  <div class="relative max-w-[1400px] w-10/12 h-205 mt-14">
+    @for (frontPageData of homeData.frontPage; track $index) {
+      @if (activeSection === frontPageData.id) {
+        <div class="absolute inset-0">
+          <img
+            [src]="frontPageData.image"
+            alt="Modelo con hoodie negro"
+            class="h-full w-full object-cover object-center rounded-4xl opacity-50"
+          />
+          <div class="absolute inset-0 from-black/80 via-transparent to-transparent"></div>
+        </div>
+        <div class="relative z-10 flex h-full flex-col justify-end px-8">
+          <div class="max-w-2xl space-y-6 mb-26 lg:mb-36">
+            <h1
+              class="font-heading text-4xl md:text-5xl w-full md:w-full font-black uppercase leading-[0.9] tracking-tighter"
+            >
+              {{ frontPageData.title }}
+            </h1>
+
+            <p class="max-w-md text-zinc-300 text-lg leading-relaxed">
+              {{ frontPageData.description }}
+            </p>
+
+            <button
+              class="flex items-center gap-3 bg-white pl-8 pr-1 py-1.5 rounded-full text-black font-semibold transition-all hover:bg-gray-200"
+            >
+              Comprar ahora
+              <div class="w-10 h-10 rounded-full flex items-center justify-center bg-black">
+                <span class="pi pi-arrow-right text-white"></span>
+              </div>
+            </button>
+          </div>
+
+          <div class="absolute bottom-6 w-full left-0 px-10">
+            <div class="grid grid-cols-5 gap-4 border-t border-white/20 pt-4">
+             @for (item of sections; track item.id) {
+            <div
+              (click)="initSection(item.id)"
+              class="cursor-pointer transition-opacity duration-300"
+              [class.opacity-100]="activeSection === item.id"
+              [class.opacity-50]="activeSection !== item.id"
+            >
+              @if (activeSection === item.id) {
+                <div
+                  [style.width.%] = "contador()"
+                  class="absolute -top-[1px] h-[2.5px] bg-white fade-in-element transition-all duration-300 ease-linear">
+                </div>
+              }
+              <span class="block text-xl font-bold">0{{ item.id }}</span>
+
+             <p  class="text-[10px] hidden lg:block md:text-xs uppercase tracking-wider font-medium leading-tight">
+                {{ item.title }}
+              </p>
+            </div>
+          } 
+            </div>
+          </div>
+        </div>
+      }
+    }
   </div>
-</div>
+</section>
+<section>
+
+</section>

@@ -24,9 +24,11 @@
   </div>
 </div>
   @if(openNavbar){
-    <div class="bg-zinc-800 absolute top-18 left-0 w-full h-auto flex flex-col">
+    <div class="absolute top-18 z-2 left-0 w-full bg-zinc-800 h-auto flex flex-col">
       @for(link of links; track $index ){
-        <a routerLink="{{link.href}}" class="text-white flex text-lg py-5 pl-8 hover:bg-zinc-700">{{link.name}}</a>
+        <a [routerLink]="link.href" class="w-full h-full py-5 pl-8 hover:bg-zinc-700">
+            <span class="text-white flex text-lg">{{link.name}}</span>
+        </a>
       }
     </div>
   }
