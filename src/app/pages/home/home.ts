@@ -17,31 +17,7 @@ export class Home {
   titleText: string = 'SHIP YOUR WEBSITE QUICKLY WITH FRAMEBLOX';
   introText: string = 'Use prebuilt templates and components for a professional, stunning look. Save time and focus on content with our user-friendly, customizable design solutions.';
 
-  // Datos para la galería de tarjetas, recreando la disposición de la imagen original
-  cards: any[] = [
-    {
-      type: 'image',
-      imageUrl: 'https://images.unsplash.com/photo-1616012019946-b63e5b38148b?q=80&w=800&auto=format&fit=crop', // Reemplazar con URL de imagen real o asset local
-      // En una implementación real, aquí iría la URL de la imagen de la persona con la sudadera naranja.
-    },
-    {
-      type: 'dark',
-      title: 'BUILT BY THE STREETS, MADE FOR YOU',
-      description: 'From the streets to your style—our journey is all about self-expression and rebellion. Join the movement.',
-      buttonText: 'Read our story',
-    },
-    {
-      type: 'light',
-      title: 'ELEVATE YOUR STREET GAME',
-      description: 'From bold graphics to everyday essentials, explore our latest drops and signature pieces designed for the culture.',
-      buttonText: 'Shop collections',
-    },
-    {
-      type: 'image-bw',
-      imageUrl: 'https://images.unsplash.com/photo-1576566162370-d94892c5a089?q=80&w=800&auto=format&fit=crop', // Reemplazar con URL de imagen real en B&W o asset local
-      // En una implementación real, aquí iría la URL de la imagen del perchero con la camiseta blanca.
-    }
-  ];
+  // Datos para la galería de tarjetas, recreando la disposición de la imagen origin
 
   // Función simulada para los botones de llamada a la acción
   onAction(card: any): void {
