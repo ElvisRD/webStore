@@ -111,44 +111,62 @@
 <section class="w-full flex justify-center text-white py-20 px-6 sm:px-12 md:px-24 font-sans">
   <div class="max-w-[1400px] flex flex-col lg:flex-row">
     <div class="flex flex-col pr-0 lg:pr-10">
-      <span class="text-lg lg:text-3xl">{{homeData.wearMovement.title}}</span>
-      <h1 class="mt-3 text-5xl font-bold lg:text-[calc(1.5rem,5vw,3rem)]">{{homeData.wearMovement.title2}}</h1>
+      <span class="text-lg lg:text-3xl">{{ homeData.wearMovement.title }}</span>
+      <h1 class="mt-3 text-5xl font-bold lg:text-[calc(1.5rem,5vw,3rem)]">
+        {{ homeData.wearMovement.title2 }}
+      </h1>
     </div>
     <div class="flex flex-col justify-center lg:pl-20 mt-4 gap-4">
-      <p class="text-justify">{{homeData.wearMovement.description}}</p>
-      <p class="text-justify">{{homeData.wearMovement.description2}}</p>
+      <p class="text-justify">{{ homeData.wearMovement.description }}</p>
+      <p class="text-justify">{{ homeData.wearMovement.description2 }}</p>
       <div class="w-full mt-2">
-        <button class="pl-4 pr-1 cursor-pointer py-1 flex bg-white items-center gap-3 relative rounded-full">
-        <span class="text-black">Get it now</span>
-        <div class="flex bg-black rounded-full p-3">
-          <span class="pi pi-arrow-right"></span>
-        </div>
+        <button
+          class="pl-4 pr-1 cursor-pointer py-1 flex bg-white items-center gap-3 relative rounded-full"
+        >
+          <span class="text-black">Get it now</span>
+          <div class="flex bg-black rounded-full p-3">
+            <span class="pi pi-arrow-right"></span>
+          </div>
         </button>
       </div>
     </div>
   </div>
 </section>
 
-<section class="w-full text-white py-20 px-6 sm:px-12 md:px-24 font-sans">
-  <div class="max-w-[1400px] mx-auto">
-    <h1 class="text-6xl font-extrabold uppercase tracking-tight mb-5 leading-none max-w-lg">
-      {{ homeData.featuredDrops.title }}
-    </h1>
-    <p class="text-zinc-400 max-w-3xl text-lg leading-relaxed font-normal">
-      {{ homeData.featuredDrops.description }}
-    </p>
+<section class="w-full text-white py-20 font-sans">
+  <div class="w-full px-6 sm:px-12 md:px-24">
+    <div class="max-w-[1400px] mx-auto">
+      <h1 class="text-6xl font-extrabold uppercase tracking-tight mb-5 leading-none max-w-lg">
+        {{ homeData.featuredDrops.title }}
+      </h1>
+      <p class="text-zinc-400 max-w-3xl text-lg leading-relaxed font-normal">
+        {{ homeData.featuredDrops.description }}
+      </p>
+    </div>
   </div>
-  <div class="mt-12 w-full bg-red-300 flex gap-20 ">
-    @for (drop of homeData.featuredDrops.drops; track drop) {
-      <div class="w-[600px] h-[800px]">
-        <div class="">
-          <img class="w-full object-fit" [src]="drop.image" [alt]="drop.title">
+  <div class="mt-12 w-full justify-center flex gap-10">
+      @for (drop of homeData.featuredDrops.drops; track drop) {
+        <div class="min-w-[600px]">
+          <div class="min-w-[100px] relative">
+            <img
+              class="w-full h-full brightness-75 rounded-4xl"
+              [src]="drop.image"
+              [alt]="drop.title"
+            />
+            <div class="flex absolute p-5 bottom-0 flex-col gap-1">
+              <span class="text-2xl font-bold">blackasdfasdf</span>
+              <p>asdfasdfasdfasdf</p>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col">
-          <span>blackasdfasdf</span>
-          <p>asdjfasldfj</p>
-        </div>
-      </div>
-    }
+      }
+    </div>
+  <div class="w-full mt-8 gap-4 flex justify-center">
+    <button class="rounded-full cursor-pointer bg-white w-10 h-10 flex justify-center items-center">
+      <span class="pi pi-arrow-left text-black"></span>
+    </button>
+    <button class="rounded-full cursor-pointer bg-white w-10 h-10 flex justify-center items-center">
+      <span class="pi pi-arrow-right text-black"></span>
+    </button>
   </div>
 </section>
