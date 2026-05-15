@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
 import homeData from './../../../../public/data/home.json';
-import { CarruselDrag } from '../../components/carrusel-drag/carrusel-drag';
+import { DragCarousel } from '../../components/drag-carousel/drag-carousel';
 
 @Component({
   selector: 'app-home',
-  imports: [CarruselDrag],
+  imports: [DragCarousel],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

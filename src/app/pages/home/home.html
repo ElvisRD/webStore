@@ -145,7 +145,7 @@
     </div>
   </div>
   <div class="mt-12 justify-center flex gap-10">
-      <!-- <app-carrusel-drag class="bg-red-300 w-full flex justify-center">
+      <!-- <app-drag-carousel class="bg-red-300 w-full flex justify-center">
         @for (drop of homeData.featuredDrops.drops; track drop) {
           <img
             class="max-w-[600px] h-full brightness-75 rounded-4xl"
@@ -157,9 +157,9 @@
             <p>asdfasdfasdfasdf</p>þ
           </div>
         }
-      </app-carrusel-drag> -->
+      </app-drag-carousel> -->
 
-      <app-carrusel-drag [items]="homeData.featuredDrops.drops" [itemTemplate]="tmpl" />
+      <app-drag-carousel [items]="homeData.featuredDrops.drops" [itemTemplate]="tmpl" />
 
       <ng-template #tmpl let-drop>
         <div class="max-w-[550px] min-w-[300px] w-[80vw] min-h-[600px]">
