@@ -1,0 +1,24 @@
+<div class="relative overflow-hidden w-full" #container>
+      <div
+        class="flex gap-4 select-none"
+        #track
+        [style.transform]="'translateX(' + translateX + 'px)'"
+        [style.transition]="dragging ? 'none' : 'transform 0.3s ease-out'"
+        (mousedown)="onDown($event.clientX)"
+        (touchstart)="onDown($event.touches[0].clientX)"
+        (mousemove)="onMove($event.clientX)"
+        (touchmove)="onMove($event.touches[0].clientX)"
+        (mouseup)="onUp()"
+        (mouseleave)="onUp()"
+        (touchend)="onUp()"
+      >
+        @for (i of [0,1,2]; track i) {
+          @for (slide of items(); track slide) {
+            <ng-container
+              [ngTemplateOutlet]="itemTemplate()!"
+              [ngTemplateOutletContext]="{ $implicit: slide }"
+            />
+          }
+        }
+      </div>
+</div>

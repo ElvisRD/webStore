@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
 import homeData from './../../../../public/data/home.json';
+import { CarruselDrag } from '../../components/carrusel-drag/carrusel-drag';
 
 @Component({
   selector: 'app-home',
-  imports: [ButtonModule],
+  imports: [CarruselDrag],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

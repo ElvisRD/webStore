@@ -144,23 +144,30 @@
       </p>
     </div>
   </div>
-  <div class="mt-12 w-full justify-center flex gap-10">
-      @for (drop of homeData.featuredDrops.drops; track drop) {
-        <div class="min-w-[600px]">
-          <div class="min-w-[100px] relative">
-            <img
-              class="w-full h-full brightness-75 rounded-4xl"
-              [src]="drop.image"
-              [alt]="drop.title"
-            />
-            <div class="flex absolute p-5 bottom-0 flex-col gap-1">
-              <span class="text-2xl font-bold">blackasdfasdf</span>
-              <p>asdfasdfasdfasdf</p>
-            </div>
+  <div class="mt-12 justify-center flex gap-10">
+      <!-- <app-carrusel-drag class="bg-red-300 w-full flex justify-center">
+        @for (drop of homeData.featuredDrops.drops; track drop) {
+          <img
+            class="max-w-[600px] h-full brightness-75 rounded-4xl"
+            [src]="drop.image"
+            [alt]="drop.title"
+          />
+          <div class="flex absolute p-5 bottom-0 flex-col gap-1">
+            <span class="text-2xl font-bold">blackasdfasdf</span>
+            <p>asdfasdfasdfasdf</p>þ
           </div>
+        }
+      </app-carrusel-drag> -->
+
+      <app-carrusel-drag [items]="homeData.featuredDrops.drops" [itemTemplate]="tmpl" />
+
+      <ng-template #tmpl let-drop>
+        <div class="max-w-[550px] min-w-[300px] w-[80vw] min-h-[600px]">
+          <img class="h-full brightness-75 rounded-4xl object-cover"
+            [src]="drop.image" [alt]="drop.title" />
         </div>
-      }
-    </div>
+      </ng-template>
+  </div>
   <div class="w-full mt-8 gap-4 flex justify-center">
     <button class="rounded-full cursor-pointer bg-white w-10 h-10 flex justify-center items-center">
       <span class="pi pi-arrow-left text-black"></span>
